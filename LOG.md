@@ -12,15 +12,19 @@ So, after building my infill printer, I still felt myself in that zone of consta
 4 Axis: Mechanically simple (except for the fact it needs to be made of metal), more costly, but can make much more complex parts, and requires complex CAM, code, and fixturing to support 4 axis)
 5 Axis: Absolutely insane in the mechanical and software complexity, along with the cam required and the fixturing techniques. 
 # Beware
-This project is less cad-heavy and much more research heavy. Numerous parts, components, and equipment involved in this project are outdated and possibly lack cad files due to their age. This log will include what little cad is involved for this machine, but mostly is here to cover my thought and research progress throughout this project. 
+This project is less cad-heavy and much more research and technique heavy. Numerous parts, components, and equipment involved in this project are outdated and possibly lack cad files due to their age. This log will include what little cad is involved for this machine, but mostly is here to cover my thought and research progress throughout this project. 
 
 # Starting Off (Days 1-2, 5/27-28/25)
 ## Frame (Day 1, 5/27/25)
 I've decided to start with the frame, as most 3 axis cnc machines follow a modular style. I've decided that a small dremel/router spindle can be mounted to an ender 3, and for the drive system, as numerous people have been capable of utilizing the stock motion system and a simple dremel for the spindle. 
 ## Motion (Day 1, 5/27/25)
 Thanks to attending RMRRF, I managed to acquire 2 geared nema 17 motors, with a ratio of 10:1 paired with a stepper capable of 0.48 Nm (Holding), which when going through the gear ratio approximately means 4.8 Nm of holding torque. Paired with the stock belts, and some redone mounts, should leave me an adequate amount of drive torque for lower speeds, as this will likely live it's life cutting polycarbonate and pcbs. 
+![image](https://github.com/user-attachments/assets/8ec6ff6d-26a9-41af-a848-9ef70ab271a3)
+
 ## Spindle (Day 2, 5/28/25)
 For the spindle, i've managed to accquire a simple dremel that needs new brushes. It's incredibly simple and reliable, and can be controlled by a relay and has variable speed. Pairing this with a thin, ball-nose or small endmill should yield an adequate amount of precision given it's constraints. When it comes to PCBs, and polycarbonate for robotics, Using a paper for workpiece zeroing is plenty adequate. 
+![image](https://github.com/user-attachments/assets/83f576b5-93fd-4f89-aedc-e507bb1d6adf)
+An example of dremels being used with bedslinger style printers for cnc
 ## Control system (Day 2-3, 5/28-29/25)
 ### GRBHAL (Days 2-3, 5/28-29/25)
 Control wise, there are numerous softwares and firmwares out there for cnc machines. GRBLHAL is likely the best choice firmware wise, it's somewhat akin to marlin, but for CNC machines. With a 3 Axis machine, there's no need for any sort of processor offloading in the CNC world as CNC machines likely will not be moving nearly fast enough to require high-speed calculations such as PA, IS, Bed Meshing, Cruise ratios, PID, or MPC like klipper does. 
