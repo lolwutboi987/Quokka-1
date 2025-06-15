@@ -1,3 +1,10 @@
+---
+title: "Quokka-1"
+author: "Evan Le"
+description: "Open-Source 3 AXIS CNC MILL"
+created_at: "2024-05-28"
+---
+
 # The beginning
 So, after building my infill printer, I still felt myself in that zone of constantly thinking about and designing cnc controlled machines. I saw the highway link and decided, im going to pitch a 3d printer. However after seeing the absolute flood of 3d printer pitches, and the fact that my infill printer was plenty functional, I decided, rather than make a 3 axis machine that does additive manufacturing, I decided to do something that uses subtractive manufacturing. That meant i had a few options:
 # Laser cutter/engraver
